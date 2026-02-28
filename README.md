@@ -87,79 +87,14 @@
 
 ```
 📂 Scripts/
-├── 📂 _Core/                            # Shared infrastructure (no game logic)
-│   ├── 📂 Events/                       #   Event channels & listeners (OnBalloonDropped, OnPhotoTaken)
-│   ├── 📂 Interfaces/                   #   IPhotoTarget, IBalloonZone, ICameraMode
-│   ├── 📂 Patterns/                     #   Singleton, ObjectPool, StateMachine
-│   ├── 📂 Extensions/                   #   C# extension methods / helpers
-│   └── 📂 Constants/                    #   GameConstants, Tags, Layers, InputNames
-│
 ├── 📂 FlightSystem/                     # System: Fixed-Wing Aircraft & Flight Physics
-│   ├── 📂 Core/                         #   FlightController, TakeoffLanding, PitchRollYaw
-│   ├── 📂 Data/                         #   FlightConfig, FlightStats, AircraftState
-│   ├── 📂 ScriptableObjects/            #   AircraftSO (lift, drag, thrust params)
-│   ├── 📂 Input/                        #   FlightInputHandler, InputActions
-│   ├── 📂 UI/                           #   FlightHUD, SpeedAltitudeDisplay
-│   └── 📄 README.md
-│
 ├── 📂 CameraSystem/                     # System: Camera Modes (Third-Person & Nose Cam)
-│   ├── 📂 Core/                         #   CameraController, CameraModeSwitcher
-│   ├── 📂 Data/                         #   CameraConfig, CameraMode (enum)
-│   ├── 📂 UI/                           #   CameraModeIndicatorUI
-│   └── 📄 README.md
-│
-├── 📂 BalloonSystem/                    # System: Balloon Drop at Specific Spots
-│   ├── 📂 Core/                         #   BalloonDropper, BalloonZoneManager
-│   ├── 📂 Data/                         #   BalloonZoneData, BalloonDropRecord
-│   ├── 📂 ScriptableObjects/            #   BalloonZoneSO (position, radius, balloon type)
-│   ├── 📂 Trigger/                      #   BalloonZoneTrigger (scene-placed zone colliders)
-│   ├── 📂 UI/                           #   BalloonHUD, ZoneMarkerUI
-│   └── 📄 README.md
-│
+├── 📂 BalloonSystem/                    # System: Balloon Drop at Specific Spots│
 ├── 📂 PhotoSystem/                      # System: Aerial Photo Capture
-│   ├── 📂 Core/                         #   PhotoCapture, PhotoTargetDetector, PhotoGallery
-│   ├── 📂 Data/                         #   PhotoData, PhotoTargetData
-│   ├── 📂 ScriptableObjects/            #   PhotoTargetSO (target location, description)
-│   ├── 📂 Trigger/                      #   PhotoZoneTrigger (area that activates target)
-│   ├── 📂 UI/                           #   PhotoViewfinderUI, GalleryUI, CaptureFlashUI
-│   └── 📄 README.md
-│
-├── 📂 WorldSystem/                      # System: 3D Open World & Environment
-│   ├── 📂 Core/                         #   WorldManager, TerrainManager, LandmarkManager
-│   ├── 📂 Data/                         #   WorldConfig, LandmarkData
-│   ├── 📂 ScriptableObjects/            #   WorldSettingsSO, LandmarkSO
-│   ├── 📂 UI/                           #   MinimapUI, CompassUI
-│   └── 📄 README.md
-│
-├── 📂 AudioSystem/                      # System: Audio (Engine, SFX, Ambience)
-│   ├── 📂 Core/                         #   AudioManager, EngineAudioController, AmbiencePlayer
-│   ├── 📂 Data/                         #   SFXLibrary, EngineAudioConfig
-│   └── 📄 README.md
-│
 ├── 📂 MainMenuSystem/                   # System: Main Menu & Settings
-│   ├── 📂 Core/                         #   MainMenuManager, SceneLoader
-│   ├── 📂 UI/                           #   MainMenuUI, SettingsUI, PauseMenuUI
-│   └── 📄 README.md
-│
-└── 📂 SaveSystem/                       # System: Save & Load Game State
-    ├── 📂 Core/                         #   SaveManager, SaveSerializer
-    ├── 📂 Data/                         #   SaveData (balloon progress, photo gallery, position)
-    └── 📄 README.md
+
 ```
 
-**Sub-folder per System:**
-
-| Folder | Isi | Contoh |
-|---|---|---|
-| `Core/` | Manager, main logic, controller | `FlightController.cs`, `BalloonDropper.cs`, `PhotoCapture.cs` |
-| `Data/` | Data classes, structs, enums (C# only) | `FlightConfig.cs`, `BalloonZoneData.cs`, `PhotoData.cs` |
-| `ScriptableObjects/` | ScriptableObject definitions | `AircraftSO.cs`, `BalloonZoneSO.cs`, `PhotoTargetSO.cs` |
-| `Input/` | Input handling (khusus FlightSystem) | `FlightInputHandler.cs` |
-| `Trigger/` | Scene-placed collider/zone scripts | `BalloonZoneTrigger.cs`, `PhotoZoneTrigger.cs` |
-| `UI/` | UI scripts for this system | `FlightHUD.cs`, `PhotoViewfinderUI.cs`, `ZoneMarkerUI.cs` |
-| `Editor/` | Custom editor tools (jika ada) | `BalloonZoneEditor.cs` |
-
-> **Aturan:** Setiap system bersifat **self-contained** — bisa dicabut dari project tanpa merusak structure. `_Core/` tidak boleh depend ke system manapun. Antar-system berkomunikasi via events/interfaces di `_Core/`.
 
 ---
 ## 📏 Coding Standards
