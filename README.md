@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Engine-Unity%202022.3-blue?logo=unity" alt="Engine"/>
+  <img src="https://img.shields.io/badge/Engine-Unity%202023.2-blue?logo=unity" alt="Engine"/>
   <img src="https://img.shields.io/badge/Language-C%23-239120?logo=csharp" alt="Language"/>
   <img src="https://img.shields.io/badge/Platform-Windows%20%7C%20Linux-lightgrey" alt="Platform"/>
   <img src="https://img.shields.io/badge/Status-In%20Development-yellow" alt="Status"/>
@@ -27,13 +27,10 @@
 
 | Category        | Tool / Technology          |
 | --------------- | -------------------------- |
-| Game Engine     | Unity 2022.3 LTS |
+| Game Engine     | Unity 2023.2.19f1 |
 | Language        | C# |
 | IDE / Editor    | Visual Studio 2022 / VS Code |
 | 3D Modeling     | Blender |
-| Audio Tool      | Audacity |
-| UI Framework    | Unity UI Toolkit / Unity Canvas |
-| Physics         | Unity Rigidbody + Custom Flight Physics |
 | Version Control | Git + GitHub |
 
 ---
