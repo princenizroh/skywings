@@ -206,7 +206,6 @@ namespace SkyWings.FlightSystem
             _rb.constraints = RigidbodyConstraints.FreezeRotationX
                             | RigidbodyConstraints.FreezeRotationZ;
 
-            // Reset sisa angular velocity dari Flying agar tidak muter sendiri
             _rb.angularVelocity = Vector3.zero;
 
             _rb.velocity = transform.forward * (_flightSpeed / 3.6f);
