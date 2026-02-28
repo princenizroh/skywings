@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6a0e4e9c41d48c4b89f894c394a3432, type: 3}
+  m_Name: AircraftSO_Default
+  m_EditorClassIdentifier: 
+  mass: 3000
+  maxThrust: 60000
+  brakingForce: 25000
+  steerSpeed: 10
+  groundDrag: 0.2
+  groundAngularDrag: 0.3
+  takeoffSpeed: 60
+  liftForce: 80000
+  minAirborneTime: 3
+  throttleRampUp: 0.8
+  throttleRampDown: 0.3
+  centerOfMassY: -2
+  flightAccel: 20
+  flightBrake: 40
+  flightIdleDecel: 5
+  minFlightSpeed: 200
+  maxFlightSpeed: 800
+  pitchSpeed: 12
+  rollSpeed: 40
+  yawSpeed: 20
+  bankTurnFactor: 0.5
+  maxPitchAngle: 35
+  maxRollAngle: 75
+  autoLevelRoll: 30
+  autoLevelPitch: 8
